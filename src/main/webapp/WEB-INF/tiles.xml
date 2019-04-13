@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+        
+<tiles-definitions>  
+ 
+    <!-- Base Define -->
+    <definition name="base.definition" 
+        template="/WEB-INF/layouts/classic.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/basefragments/_header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/basefragments/_menu.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/basefragments/_footer.jsp" />  
+    </definition>  
+    <definition name="defaultlayout" template="/WEB-INF/layouts/defaultLayout.jsp">
+     <put-attribute name="header" value="/WEB-INF/layouts/header.jsp"></put-attribute>
+    <put-attribute name="banner" value="/WEB-INF/layouts/banner.jsp"></put-attribute>
+    <put-attribute name="body" ></put-attribute>
+    <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp"></put-attribute>
+    </definition>
+    <definition name="defaultlayoutUs" template="/WEB-INF/layouts/defaultLayoutUs.jsp">
+     <put-attribute name="header" value="/WEB-INF/layouts/header.jsp"></put-attribute>
+    <put-attribute name="body" ></put-attribute>
+    <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp"></put-attribute>
+    </definition>
+    
+    
+    <definition name="register" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/user/register.jsp" />  
+    </definition>
+    <definition name="login" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/user/login.jsp" />  
+    </definition>
+    <definition name="single" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/single.jsp" />  
+    </definition>
+    <definition name="products" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/products.jsp" />  
+    </definition>
+ 
+
+    
+    <definition name="home" extends="defaultlayout">
+      <put-attribute name="body" value="/WEB-INF/views/index.jsp" />  
+    </definition>
+    
+    
+    
+
+    
+    
+    
+ 
+  
+</tiles-definitions> 
